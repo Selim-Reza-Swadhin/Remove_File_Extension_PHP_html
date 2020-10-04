@@ -1,0 +1,34 @@
+
+#vishal
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php [NC,L]
+
+#me
+#RewriteEngine  on
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.*)$ $1.php
+
+#Remove or hide .php from url
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+#Remove or hide real file extension from url and show duplicate file name
+#RewriteEngine On
+#RewriteRule ^About about.php [NC,L]
+#RewriteRule ^Bio bio.php [NC,L]
+#RewriteRule ^Selimreza contact.php [NC,L]
+#RewriteRule ^jaduname_bio  images/image_name.php [NC,L]
+
+
+#Remove or hide real file extension from url and show duplicate file name
+RewriteEngine On
+RewriteRule ^my-name-is-swadhin about.php [NC,L]
+RewriteRule ^Bio-data-name bio.php [NC,L]
+RewriteRule ^Selimreza contact.php [NC,L]
+RewriteRule ^jaduname_bio  images/image_name.php [NC,L]
+RewriteRule ^TransferId  id-trasfer.php [NC,L]
+RewriteRule ^TransferSendIdName  transfer_send_id_name.php [NC,L]

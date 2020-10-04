@@ -1,0 +1,23 @@
+#Remove or hide .html and .php from url
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+#RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+
+
+#Remove or hide .html and .php from url
+RewriteEngine On
+
+#If you want to remove extension for single file
+#RewriteRule ^index$ index-1.php [L]
+#RewriteRule ^tutorial$ tutorial-1.php [L]
+
+#For remove all php file extension
+#not directory
+RewriteCond %{REQUEST_FILENAME} !-d
+#exist filename in directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^tutorial/([a-zA-Z0-9-/]+)$ tutotial.php?language=$1
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+#RewriteRule ^([^\.]+)$ $1.html [NC,L]

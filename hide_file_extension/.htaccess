@@ -1,0 +1,26 @@
+
+#vishal
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php [NC,L]
+
+#me
+#RewriteEngine  on
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.*)$ $1.php
+
+#Remove or hide .php from url
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+#Remove or hide .html and .php from url
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+
+RewriteRule ^About about.php [NC,L]
