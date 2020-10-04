@@ -18,6 +18,6 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 #exist filename in directory
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^tutorial/([a-zA-Z0-9-/]+)$ tutotial.php?language=$1
+RewriteRule ^tutorial/([a-zA-Z0-9-/]+)$ tutorial.php?language=$1
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 #RewriteRule ^([^\.]+)$ $1.html [NC,L]
